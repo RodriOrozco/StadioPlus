@@ -1,0 +1,18 @@
+@use '../utilities/variables';
+
+.light {
+    .background {
+        background-color: #FFFFFF;  
+        min-height: 100vh;
+        height: 100%;  
+    }
+}
+
+.dark {
+    .background {
+        background-color: #011c44;    
+        min-height: 100vh;
+        height: 100%;  
+    }
+
+}

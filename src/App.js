@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./sass/main.scss";
+import { useContext } from "react";
+import { Routes, Route } from "react-router-dom";
+
+import { ThemeContext } from "./context/ThemeContext";
+
+import Home from "./pages/Home";
 
 function App() {
+  const { theme, setTheme } = useContext(ThemeContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={theme}>
+      <div className="background">
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+          switch
+        </button>
+      </div>
     </div>
   );
 }
