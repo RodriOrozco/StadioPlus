@@ -1,27 +1,40 @@
 import React from "react";
 
+import { FaSearch } from "react-icons/fa";
 import LogoNavDark from "../../assets/logoNav.png";
 
-const Nav = ({ setTheme }) => {
+const Nav = ({ setTheme, theme }) => {
   return (
-    <nav className="menu">
+    <nav className="nav">
       <img src={LogoNavDark} className="logo-dark-nav" alt="" />
-      <form>
-        <input type="text" placeholder="busca tu drop aqui" />
-        <input type="submit" value="Buscar" />
-      </form>
-      <ul>
-        <li>
+      <div className="searchBarLine">
+        <form className="searchBar">
+          <input
+            type="text"
+            className="input"
+            placeholder="busca tu drop aqui..."
+          />
+          <button type="submit" className="lupa">
+            <FaSearch />
+          </button>
+        </form>
+      </div>
+      <ul className="lista">
+        <li className="item">
           <a href="#">Mis colecciones</a>
         </li>
-        <li>
+        <li className="item">
           <a href="#">Login</a>
         </li>
       </ul>
-      <button>registrarse</button>
-      <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-        switch
-      </button>
+      <button className="buttonRegister">REGISTRARSE</button>
+      <label className="switchMode">
+        <input
+          type="checkbox"
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        ></input>
+        <span className="sliderMode"></span>
+      </label>
     </nav>
   );
 };

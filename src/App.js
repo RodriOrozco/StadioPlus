@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import { ThemeContext } from "./context/ThemeContext";
 
 import Home from "./pages/Home";
-import Nav from "../componentes/Nav";
+import Nav from "./componentes/Nav";
 
 function App() {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className={theme}>
       <div className="background">
-        <Nav prop={setTheme} />
+        <Nav setTheme={setTheme} theme={theme} />
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
