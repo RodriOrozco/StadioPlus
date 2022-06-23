@@ -1,0 +1,32 @@
+.footer{
+    height: 451px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    border: 1px solid white;
+    img{
+        width: 239px;
+        height: 42px;
+    }
+    h6{
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: #ffff;
+        opacity: 60%;
+        font-weight: 400;
+    }
+    .socialIcons{
+        width: 120px;
+        color: #ffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        .icono {
+            width: 22px;
+            height: 18px;
+        }
+    }
+}

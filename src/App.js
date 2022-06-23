@@ -6,6 +6,7 @@ import { ThemeContext } from "./context/ThemeContext";
 
 import Home from "./pages/Home";
 import Nav from "./componentes/Nav";
+import Footer from "./componentes/Footer";
 
 function App() {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
+        <Footer />
       </div>
     </div>
   );
