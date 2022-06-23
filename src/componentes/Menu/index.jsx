@@ -20,21 +20,19 @@ const Menu = () => {
             ARTISTAS <RiArrowRightSFill className="flechita" />
           </button>
           <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <a href="#">ARTISTA 1</a>
+            <a href="#">ARTISTA 2</a>
+            <a href="#">ARTISTA 3</a>
           </div>
         </div>
         <a href="#">PROMOCIONES</a>
       </div>
       <div class="dropdown">
         <button class="dropbtn">
-          Es <RiArrowRightSFill className="flechita" />
+          ES <RiArrowRightSFill className="flechita" />
         </button>
         <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          <a href="#">EN</a>
         </div>
       </div>
     </div>

@@ -23,6 +23,7 @@
         background-color: white;
         clip-path: polygon(0 20%, 5% 0, 100% 0%, 100% 80%, 95% 100%, 0 100%);
         padding: 0, 15px, 0 15px;
+        opacity: 0.5;
         .searchBar{
             width: 336px;
             height: 33px;
@@ -37,6 +38,8 @@
             .input{
                 width: 60%;
                 font-size: 1rem;
+                font-family: $font-Montserrat;
+                font-weight: 600;
                 color: #FFFFFF;
                 background: transparent;
                 border: none;
@@ -55,6 +58,7 @@
                 width: 18px;
                 height: 18px;
                 color: #FFFFFF;
+                opacity: 0.5;
                 background: transparent;
                 border: none;
                 outline: none;
@@ -73,9 +77,11 @@
 
         .item {
             a {
+                font-family: $font-Montserrat;
                 text-decoration: none;
                 color: #FFFFFF;
                 font-weight: 600;
+                opacity: 0.5;
                 text-transform: uppercase;
                 font-size: 1rem;
             }
@@ -87,6 +93,7 @@
         width: 189px;
         height: 33px;
         border: none;
+        font-family: $font-Montserrat;
         background-color: #D6302A;
         clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
         font-size: 1rem;
