@@ -1,9 +1,13 @@
 import React from "react";
+
+import AcercaDe from "../componentes/AcercaDe";
+import Noticias from "../componentes/Noticias";
 import Card from "../componentes/Card";
 import Clients from "../componentes/Clients";
 import Draft from "../componentes/Draft";
-
 import Hero from "../componentes/Hero";
+import Banner1 from "../componentes/Banner1";
+import Banner2 from "../componentes/Banner2";
 
 const Home = () => {
   return (
@@ -19,8 +23,12 @@ const Home = () => {
         <button className="btn-token">TOKEN</button>
         <button className="btn-token">IR AL BLOG</button>
       </div>
+      <Banner1 />
       <Clients />
+      <AcercaDe />
+      <Noticias />
       <Draft />
+      <Banner2 />
     </>
   );
 };

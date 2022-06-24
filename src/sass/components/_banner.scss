@@ -1,0 +1,106 @@
+.bannerConteiner{
+    
+    @include flexible(flex, column, center, center);
+    height: 365px;
+    background-color: $secondary-color;
+    position: relative;
+    width: 98.58vw;
+    
+    .imgText{
+       
+        @include flexible(flex, row, space-around, center);
+        position: absolute;
+        z-index: 3;
+        background: transparent;
+        width: 1200px;
+        .textConteiner{
+            padding: 20px 0px 20px 0px;
+            @include flexible(flex, column, space-evenly, flex-start);
+            
+            // width: 630px;
+            max-height: 280px;
+            width: 55%;
+            h1{
+                
+                font-size: 30px;
+                font-family: $font-Machina;
+                font-weight: 800;
+                color: $font-button-color;
+                line-height: 120%;
+                margin-bottom: 14px;
+                   
+                label {
+                    font-size: 32px;
+                    font-weight: 800;
+                    color: $button-orange;
+                }
+            }
+            p{
+                width: 90%;
+                
+                font-family: $font-Montserrat;
+                font-weight: 300;
+                font-size: 1rem;
+                color: $font-button-color;
+                line-height: 19.2px;
+                letter-spacing: 0.05em;
+                margin-bottom: 30px;
+            }
+            button{
+                
+                width: 270px;
+                height: 40px;
+                border: none;
+                font-family: $font-Montserrat;
+                background-color: #D6302A;
+                clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
+                font-size: 1rem;
+                color: #FFFFFF;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+
+        .imageConteiner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            width: 30%;
+            height: 280px;
+            position: relative;
+            .TarjetaAzulDer{
+                position: absolute;
+                left: 20px;
+                bottom: 50px;
+                z-index: 2;
+            }
+            .TarjetaAzulIzq{
+                position: absolute;
+                right: 30px;
+                top: 40px;
+                z-index: 1;
+            }
+
+        }
+        
+    }
+    .imagenFondoBanner{
+        position: absolute;
+        // width: 1290px;
+        width: 95%;
+        height: 285px;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 90% 100%, 0 100%);
+        background-color: $background-dark;
+        z-index: 1;
+        img{
+            width: 100%;
+            
+            // width: 1290px;
+            position: absolute;
+            z-index: 2;
+
+        }
+    }
+    
+}

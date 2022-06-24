@@ -1,0 +1,54 @@
+.nosConteiner{
+    height: 97vh;
+    padding: 0px 65px 0px 65px;
+    
+    @include flexible(flex, row, space-around, center);
+    .divIzq{
+        @include flexible(flex, row, center, center);
+        height: 80%;
+        width: 526px;
+        .cardFutbol{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .futbol{
+                position: absolute;
+                z-index: 2;
+            }
+            .fondo1{
+                position: absolute;
+                z-index: 1;
+                opacity: 0.5;
+            }
+            .fondo2{
+                background: rgb(79,1,1);
+                background: linear-gradient(180deg, rgba(79,1,1,1) 0%, rgba(121,9,9,1) 21%, rgba(255,255,255,0) 100%);
+                clip-path: polygon(0 25%, 30% 0, 100% 0, 100% 100%, 100% 74%, 74% 100%, 0 100%);
+                border-radius: 10px;
+                position: relative;
+            }
+        }
+    }
+    .divDer{
+        @include flexible(flex, column, center, flex-start);
+        height: 80%;
+        width: 570px;
+        .titulo-nosotros{
+            margin: 0px 0px 30px 0px;
+            h5{
+                @include nombre(#ffff, 600, 16px, $font-Montserrat, uppercase)
+            }
+            h3{
+                @include nombre(#ffff, 800, 30px, $font-Machina, uppercase)
+            }
+        }
+        p {
+            font-family: $font-Montserrat;
+            font-weight: 500;
+            font-size: 1rem;
+            color: $font-button-color;
+            line-height: 19.2px;
+            letter-spacing: 0.05em;
+        }
+    }
+}

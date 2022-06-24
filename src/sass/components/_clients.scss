@@ -2,7 +2,7 @@
     @include flexible(flex, row, space-around, center);
     height: 110px;
     margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 
     .titulo-logos{
         @include flexible(flex, column, center, flex-start);
