@@ -1,30 +1,43 @@
 import React from "react";
 
-import FondoTarjetaAzul from "../../assets/fondoTarjetaAzul.png";
-import TarjetaAzulIzq from "../../assets/tarjetaAzulIzq-remove.png";
-import TarjetaAzulDer from "../../assets/tarjetaAzulDer.png";
+import FondoJugadorAmarillo from "../../assets/fondoJugadorAmarillo.png";
+import JugadorNaranja from "../../assets/jugadorNaranja.png";
+import JugadorAmarillo from "../../assets/jugadorAmarillo.png";
+import JugadorNaranja2 from "../../assets/jugadorNaranja.png";
 
 const Banner2 = () => {
   return (
-    <section className="bannerConteiner">
+    <section className="banner2Conteiner">
       <div className="imgText">
         <article className="textConteiner">
           <h1>
-            CONOCE EL NUEVO MARKETPLACE NFT <label>STADIOPLUS</label>
+            YA ESTA AQUI EL NUEVO TOKEN DE <label>STADIOPLUS</label>
           </h1>
           <p>
-            Podrás conseguir cualquier NFT de deporte de la red ethereum y BSC
-            con solo un 1% de comisión.
+            El token que revolucionará el modelo de monetización del mundo del
+            deporte y los eSports gracias a los NFTs.
           </p>
-          <button>MERCADO SECUNDARIO</button>
+          <div className="correoDiv">
+            <input
+              placeholder="correo@mail.com.."
+              type="text"
+              className="correoInput"
+            />
+            <button>Join the waitlist.</button>
+          </div>
+          <div className="checkboxDiv">
+            <input type="checkbox" />
+            <p>I understand I can unsubscribe at any time. Privacy Policy</p>
+          </div>
         </article>
         <article className="imageConteiner">
-          <img src={TarjetaAzulDer} alt="" className="TarjetaAzulDer" />
-          <img src={TarjetaAzulIzq} alt="" className="TarjetaAzulIzq" />
+          <img src={JugadorNaranja} alt="" className="JugadorNaranja" />
+          <img src={JugadorAmarillo} alt="" className="JugadorAmarillo" />
+          <img src={JugadorNaranja2} alt="" className="JugadorNaranja2" />
         </article>
       </div>
       <div className="imagenFondoBanner">
-        <img src={FondoTarjetaAzul} alt="" />
+        <img src={FondoJugadorAmarillo} alt="" />
       </div>
     </section>
   );

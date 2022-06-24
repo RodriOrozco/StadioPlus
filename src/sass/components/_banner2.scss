@@ -1,0 +1,135 @@
+.banner2Conteiner{
+    
+    @include flexible(flex, column, center, center);
+    height: 365px;
+    background-color: $button-orange;
+    position: relative;
+    width: 98.58vw;
+    
+    .imgText{
+        height: 78%;
+       
+        @include flexible(flex, row, space-around, center);
+        position: absolute;
+        z-index: 3;
+        background: transparent;
+        width: 1200px;
+        .textConteiner{
+            padding: 30px 0px 20px 0px;
+            @include flexible(flex, column, space-around, flex-start);
+            
+            // width: 630px;
+            height: 82%;
+            width: 55%;
+            h1{
+                font-size: 30px;
+                font-family: $font-Machina;
+                font-weight: 800;
+                color: $font-button-color;
+                line-height: 120%;
+                margin-bottom: 14px;
+                   
+                label {
+                    font-size: 32px;
+                    font-weight: 800;
+                    color: $button-orange;
+                }
+            }
+            p{
+                width: 90%;
+                
+                font-family: $font-Montserrat;
+                font-weight: 300;
+                font-size: 1rem;
+                color: $font-button-color;
+                line-height: 19.2px;
+                letter-spacing: 0.05em;
+                margin-bottom: 30px;
+            }
+
+            .correoDiv{
+                
+
+                .correoInput {
+                    width: 321px;
+                    height: 33px;
+                    border: 1px solid #FFFFFF;
+                    border-radius: 10px;
+                    font-family: $font-Poppins;
+                    background-color: transparent;
+                    font-size: 12px;
+                    color: #FFFFFF;
+                    font-weight: 600;
+                    margin-right: 20px;
+                    padding-left: 20px;
+                }
+    
+                button{
+                    
+                    width: 161px;
+                    height: 34px;
+                    border: 1px solid #FFFFFF;
+                    border-radius: 10px;
+                    font-family: $font-Poppins;
+                    background-color: transparent;
+                    font-size: 12px;
+                    color: #FFFFFF;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+            
+            .checkboxDiv{
+                margin-top: 20px;
+                
+                @include flexible (flex, row, flex-start, flex-start);
+                height: 35px;
+                width: 65%;
+                input{
+                    margin: 10px;
+                    height: 11px;
+                    width: 11px;
+                    border: 1px solid #FFFFFF;
+                }
+
+                p{
+                    font-family: $font-Poppins;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 120%;
+                }
+            }
+            
+        }
+
+        .imageConteiner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            width: 30%;
+            height: 280px;
+            position: relative;
+        }
+        
+    }
+    .imagenFondoBanner{
+        position: absolute;
+        // width: 1290px;
+        width: 95%;
+        height: 285px;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 90% 100%, 0 100%);
+        background-color: $background-dark;
+        z-index: 1;
+        img{
+            width: 100%;
+            
+            // width: 1290px;
+            position: absolute;
+            z-index: 2;
+
+        }
+    }
+    
+}
