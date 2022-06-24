@@ -1,5 +1,7 @@
 import React from "react";
 import Card from "../componentes/Card";
+import Clients from "../componentes/Clients";
+import Draft from "../componentes/Draft";
 
 import Hero from "../componentes/Hero";
 
@@ -17,6 +19,8 @@ const Home = () => {
         <button className="btn-token">TOKEN</button>
         <button className="btn-token">IR AL BLOG</button>
       </div>
+      <Clients />
+      <Draft />
     </>
   );
 };

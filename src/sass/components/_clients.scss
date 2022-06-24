@@ -1,0 +1,25 @@
+.clientsContainer{
+    @include flexible(flex, row, space-around, center);
+    height: 110px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    .titulo-logos{
+        @include flexible(flex, column, center, flex-start);
+        height: 80px;
+        padding: 30px 100px 0px 100px;
+        h5{
+            @include nombre(#ffff, 600, 16px, $font-Montserrat, uppercase)
+        }
+        h3{
+            @include nombre(#ffff, 800, 30px, $font-Machina, uppercase)
+        }
+    }
+    .logosContainer{
+        height: 80%;
+        width: 60%;
+        padding-right: 30px;
+        padding-left: 30px;
+        @include flexible(flex, row, space-around, flex-end);
+    }
+}

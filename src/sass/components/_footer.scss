@@ -1,5 +1,7 @@
 .footer{
-    height: 451px;
+    
+    min-height: 450px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,6 +10,8 @@
     img{
         width: 239px;
         height: 42px;
+        
+        margin-bottom: 40px;
     }
     h6{
         font-family: $font-Roboto;
@@ -16,8 +20,10 @@
         color: #ffff;
         opacity: 0.6;
         font-weight: 400;
+        
     }
     .socialIcons{
+        
         width: 120px;
         color: #ffff;
         display: flex;
