@@ -1,12 +1,14 @@
-@mixin nombre( $argumento1 , $argumento2 , $argumento3 ){
+@mixin nombre( $argumento1 , $argumento2 , $argumento3, $argumento4, $argumento5){
     color       : $argumento1;
     font-weight : $argumento2;
     font-size   : $argumento3;
+    font-family: $argumento4;
+    text-transform: $argumento5;
 }
 
-@mixin flexible( $dis , $direction , $corte , $just , $align ){
+@mixin flexible( $dis , $direction , $just , $align ){
     display         : $dis;
-    flex-flow       : $direction $corte;
+    flex-direction  : $direction;
     justify-content : $just;
     align-items     : $align;
 }

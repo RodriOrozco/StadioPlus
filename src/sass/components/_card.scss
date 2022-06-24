@@ -1,0 +1,126 @@
+.sliderContainer{
+    height: 600px;
+    width: auto;
+    @include flexible(flex, column, space-evenly, center);
+    .fondoTitulo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $secondary-color;
+        border: none;
+        height: 55px;
+        width: 80vw;
+        padding-bottom: 3px;
+        padding-right: 2px;
+        clip-path: polygon(0 0%, 100% 0, 100% 0%, 100% 65%, 96% 100%, 0 100%);
+        .tituloCards{
+            display: flex;
+            align-items: flex-end;
+            width: 100%;
+            height: 57px;
+            background-color: $background-dark;
+            text-align: start;
+            @include nombre($secondary-color, 700, 18px, $font-Montserrat, uppercase);
+            clip-path: polygon(0 0%, 100% 0, 100% 0%, 100% 65%, 96% 100%, 0 100%);
+        }
+    }
+
+    .slider {
+        width: 86vw;
+        height: 450px;
+        @include flexible(flex, row, center, center);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        .individualCard{
+                border-radius: 15px;
+                max-height: 400px;
+                height: 400px;
+                max-width: 345px;
+                // background-color: $secondary-dark;
+                // clip-path: polygon(0 30%, 40% 0, 100% 0%, 100% 70%, 60% 100%, 0 100%);
+                position: relative;
+              
+
+    
+            .cardBody{
+                @include flexible(flex, row, center, center);
+                // border-radius: 15px;
+                // max-height: 400px;
+                // height: 100%;
+                // max-width: 345px;
+                background-color: $secondary-dark;
+                clip-path: polygon(0 25%, 35% 0, 100% 0%, 100% 80%, 70% 100%, 0 100%);
+                
+                
+                .conteinerCardElements{
+                    @include flexible(flex, column, center, center);
+                    img {
+                        margin-top: 20px;
+                        margin-bottom: 10px;        
+                    }
+
+                    h4{
+                        min-height: 50px;
+                        @include flexible(flex, row, flex-start, center);
+                        @include nombre(#ffff, 600, 16px, $font-Montserrat, uppercase);
+                        width: 80%;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        text-align: start;
+                    }
+                    
+                    .prices{
+                        @include flexible(flex, column, space-around, space-around);
+                        width: 80%;
+                        height: 50px;
+                        text-align: start;
+                        margin-top: 10px;
+                        margin-bottom: 20px;
+                        h5 {
+                            @include nombre(#ffff, 700, 16px, $font-Montserrat, uppercase);
+                        }
+                        h6 {
+                            @include nombre(#ffff, 400, 14px, $font-Montserrat, uppercase);
+                        }
+                    }
+                }
+            }
+
+            .btn-naranja {
+                width: 189px;
+                height: 40px;
+                border: none;
+                font-family: $font-Montserrat;
+                background-color: #D6302A;
+                clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
+                font-size: 1rem;
+                color: #FFFFFF;
+                font-weight: 600;
+                position: absolute;
+                z-index: 1;
+                bottom: 10px;
+                right: -15px;
+            }
+
+            .btn-azul {
+                width: 189px;
+                height: 40px;
+                border: none;
+                font-family: $font-Montserrat;
+                background-color: $secondary-color;
+                clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
+                font-size: 1rem;
+                color: #FFFFFF;
+                font-weight: 600;
+                position: absolute;
+                z-index: 1;
+                bottom: 10px;
+                right: -15px;
+            }
+        }
+    }
+
+}
