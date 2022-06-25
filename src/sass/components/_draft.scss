@@ -1,58 +1,131 @@
+.dark {
 
-.draftConteiner{
-    margin: 40px 0px 40px 0px;
-    .artistasBox {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        // padding-left: 118px;
-        // padding-right: 118px;
-        background-color: #0039FF;
-    
-        height: 37px;
-        .listaArtistas{
-            @include flexible(flex, row, space-around, center);
+    .draftConteiner{
+        margin: 40px 0px 40px 0px;
+        .artistasBox {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            // padding-left: 118px;
+            // padding-right: 118px;
+            background-color: #0039FF;
+        
+            height: 37px;
+            .listaArtistas{
+                @include flexible(flex, row, space-around, center);
+                width: 100%;
+                
+                li {
+                    @include nombre($secondary-dark, 700, 16px, $font-Montserrat, uppercase)
+                }
+            }
+        }
+        .conteinerMonkeys{
+            @include flexible(flex, column, center, center);
+            height: 500px;
             width: 100%;
-            
-            li {
-                @include nombre($secondary-dark, 700, 16px, $font-Montserrat, uppercase)
+            .monkeys{
+                @include flexible(flex, row, center, center);
+                .monkey {
+                    margin-right: 20px;
+                }
+            }
+            .titulo-draft{
+                @include flexible(flex, column, center, center);
+                height: 80px;
+                padding: 30px 100px 0px 100px;
+                h5{
+                    @include nombre(#ffff, 600, 16px, $font-Montserrat, uppercase)
+                }
+                h3{
+                    @include nombre(#ffff, 800, 30px, $font-Machina, uppercase)
+                }
+            }
+            .buttonConteiner{
+                margin: 20px 0px 20px 0px;
+                .btn-monkeys{
+                    width: 189px;
+                    height: 40px;
+                    border: none;
+                    font-family: $font-Montserrat;
+                    background-color: #D6302A;
+                    clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
+                    font-size: 1rem;
+                    color: #FFFFFF;
+                    font-weight: 600;
+                    cursor: pointer;
+                transition: 0.3s;
+                &:hover{
+                    transform: scale(1.05);
+                }
+                }
             }
         }
     }
-    .conteinerMonkeys{
-        @include flexible(flex, column, center, center);
-        height: 500px;
-        width: 100%;
-        .monkeys{
-            @include flexible(flex, row, center, center);
-            .monkey {
-                margin-right: 20px;
+}
+
+.light {
+    .draftConteiner{
+        margin: 40px 0px 40px 0px;
+        .artistasBox {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            // padding-left: 118px;
+            // padding-right: 118px;
+            background-color: #0039FF;
+        
+            height: 37px;
+            .listaArtistas{
+                @include flexible(flex, row, space-around, center);
+                width: 100%;
+                
+                li {
+                    @include nombre($secondary-dark, 700, 16px, $font-Montserrat, uppercase)
+                }
             }
         }
-        .titulo-draft{
+        .conteinerMonkeys{
             @include flexible(flex, column, center, center);
-            height: 80px;
-            padding: 30px 100px 0px 100px;
-            h5{
-                @include nombre(#ffff, 600, 16px, $font-Montserrat, uppercase)
+            height: 500px;
+            width: 100%;
+            .monkeys{
+                @include flexible(flex, row, center, center);
+                .monkey {
+                    margin-right: 20px;
+                }
             }
-            h3{
-                @include nombre(#ffff, 800, 30px, $font-Machina, uppercase)
+            .titulo-draft{
+                @include flexible(flex, column, center, center);
+                height: 80px;
+                padding: 30px 100px 0px 100px;
+                h5{
+                    @include nombre($background-dark, 600, 16px, $font-Montserrat, uppercase)
+                }
+                h3{
+                    @include nombre($background-dark, 800, 30px, $font-Machina, uppercase)
+                }
             }
-        }
-        .buttonConteiner{
-            margin: 20px 0px 20px 0px;
-            .btn-monkeys{
-                width: 189px;
-                height: 40px;
-                border: none;
-                font-family: $font-Montserrat;
-                background-color: #D6302A;
-                clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
-                font-size: 1rem;
-                color: #FFFFFF;
-                font-weight: 600;
+            .buttonConteiner{
+                margin: 20px 0px 20px 0px;
+                .btn-monkeys{
+                    width: 189px;
+                    height: 40px;
+                    border: none;
+                    font-family: $font-Montserrat;
+                    background-color: #D6302A;
+                    clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
+                    font-size: 1rem;
+                    color: #FFFFFF;
+                    font-weight: 600;
+                    cursor: pointer;
+                transition: 0.3s;
+                &:hover{
+                    transform: scale(1.05);
+                }
+                }
             }
         }
     }

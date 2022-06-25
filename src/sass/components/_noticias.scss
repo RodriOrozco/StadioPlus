@@ -1,120 +1,264 @@
-.noticiasConteiner{
-    @include flexible(flex, column, space-evenly, center);
-    height: 720px;
-    
-    .titulo-noticias{
-  
-        width: 80vw;
-        @include flexible(flex, column, center, flex-start);
-        height: 80px;
-        
-        h5{
-            @include nombre(#ffff, 600, 16px, $font-Montserrat, uppercase)
-        }
-        h3{
-            @include nombre(#ffff, 800, 30px, $font-Machina, uppercase)
-        }
-    }
+.dark{
 
-    .noticias-cards{
-        @include flexible(flex, row, space-around, center);
-        width: 86vw;
-        max-width: 1340px;
-        height: 450px;
-        // @include flexible(flex, row, center, center);
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-       
-        
-        .individualCard{
-        
-            border-radius: 15px;
-            max-height: 400px;
-            height: 400px;
-            max-width: 345px;
-            // background-color: $secondary-dark;
-            // clip-path: polygon(0 30%, 40% 0, 100% 0%, 100% 70%, 60% 100%, 0 100%);
-            position: relative;
+    .noticiasConteiner{
+        @include flexible(flex, column, space-evenly, center);
+        height: 720px;
+        // background: $background-dark;
+        .titulo-noticias{
+      
+            width: 80vw;
+            @include flexible(flex, column, center, flex-start);
+            height: 80px;
             
-            .cardBody{
-                @include flexible(flex, row, center, center);
+            h5{
+                @include nombre(#ffff, 600, 16px, $font-Montserrat, uppercase)
+            }
+            h3{
+                @include nombre(#ffff, 800, 30px, $font-Machina, uppercase)
+            }
+        }
+    
+        .noticias-cards{
+            @include flexible(flex, row, space-around, center);
+            width: 86vw;
+            max-width: 1340px;
+            height: 450px;
+            // @include flexible(flex, row, center, center);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+           
+            
+            .individualCard{
+            
                 border-radius: 15px;
-                // max-height: 400px;
-                height: 100%;
-                // max-width: 345px;
-                background-color: $secondary-color;
-                clip-path: polygon(0 25%, 35% 0, 100% 0%, 100% 80%, 70% 100%, 0 100%);
+                max-height: 400px;
+                height: 400px;
+                max-width: 345px;
+                // background-color: $secondary-dark;
+                // clip-path: polygon(0 30%, 40% 0, 100% 0%, 100% 70%, 60% 100%, 0 100%);
+                position: relative;
                 
-                .conteinerCardElements{
-                    @include flexible(flex, column, center, center);
+                .cardBody{
+                    @include flexible(flex, row, center, center);
+                    border-radius: 15px;
+                    // max-height: 400px;
+                    height: 100%;
+                    // max-width: 345px;
+                    background-color: $secondary-color;
+                    clip-path: polygon(0 25%, 35% 0, 100% 0%, 100% 80%, 70% 100%, 0 100%);
                     
-                    .flechaEnlace{
-                        @include flexible(flex, row, center, center);
-                        position: absolute;
-                        top: 32px;
-                        right: 28px;
-                        width: 41px;
-                        height: 41px;
-                        border-radius: 10px;
-                        border: 1px solid #60F0EB;
-                        background-color: $background-dark;
-                        z-index: 1;
-                        color: #FFFFFF;
-                        cursor: pointer;
-                    }
-                    img {
-                        margin-top: 10px;
-                        margin-bottom: 10px;
-                        position: relative;        
-                    }
-
-                    h4{
-                        min-height: 50px;
-                        @include flexible(flex, row, flex-start, center);
-                        @include nombre(#ffff, 600, 16px, $font-Montserrat, uppercase);
-                        width: 80%;
-                        margin-top: 10px;
-                        // margin-bottom: 10px;
-                        text-align: start;
-                    }
-                    h5 {
-                        width: 80%;
-                        text-align: start;
-                        @include nombre(#ffff, 400, 14px, $font-Montserrat,uppercase)
-                    }
-                    
-                    .prices{
-                        @include flexible(flex, column, space-around, space-around);
-                        width: 80%;
-                        height: 50px;
-                        text-align: start;
-                        margin-top: 10px;
-                        margin-bottom: 20px;
-                        p {
+                    .conteinerCardElements{
+                        @include flexible(flex, column, center, center);
+                        
+                        .flechaEnlace{
+                            @include flexible(flex, row, center, center);
+                            position: absolute;
+                            top: 32px;
+                            right: 28px;
+                            width: 41px;
+                            height: 41px;
+                            border-radius: 10px;
+                            border: 1px solid #60F0EB;
+                            background-color: $background-dark;
+                            z-index: 1;
+                            color: #FFFFFF;
+                            cursor: pointer;
+                            transition: 0.3s;
+                                &:hover{
+                                    transform: scale(1.05);
+                                }
+                        }
+                        img {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            position: relative;        
+                        }
+    
+                        h4{
+                            min-height: 50px;
+                            @include flexible(flex, row, flex-start, center);
+                            @include nombre(#ffff, 600, 16px, $font-Montserrat, uppercase);
+                            width: 80%;
+                            margin-top: 10px;
+                            // margin-bottom: 10px;
                             text-align: start;
-                            @include nombre(#ffff, 400, 14px, $font-Montserrat, uppercase);
+                        }
+                        h5 {
+                            width: 80%;
+                            text-align: start;
+                            @include nombre(#ffff, 400, 14px, $font-Montserrat,uppercase)
+                        }
+                        
+                        .prices{
+                            @include flexible(flex, column, space-around, space-around);
+                            width: 80%;
+                            height: 50px;
+                            text-align: start;
+                            margin-top: 10px;
+                            margin-bottom: 20px;
+                            p {
+                                text-align: start;
+                                @include nombre(#ffff, 400, 14px, $font-Montserrat, uppercase);
+                            }
                         }
                     }
                 }
             }
         }
+    
+        .btn-conteiner{
+            width: 70vw;
+            .btn-noticias{
+                width: 189px;
+                height: 40px;
+                border: none;
+                font-family: $font-Montserrat;
+                background-color: #D6302A;
+                clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
+                font-size: 1rem;
+                color: #FFFFFF;
+                font-weight: 600;
+                cursor: pointer;
+                transition: 0.3s;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+            }
+        }
     }
+}
 
-    .btn-conteiner{
-        width: 70vw;
-        .btn-noticias{
-            width: 189px;
-            height: 40px;
-            border: none;
-            font-family: $font-Montserrat;
-            background-color: #D6302A;
-            clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
-            font-size: 1rem;
-            color: #FFFFFF;
-            font-weight: 600;
-            cursor: pointer;
+.light {
+    .noticiasConteiner{
+        @include flexible(flex, column, space-evenly, center);
+        height: 720px;
+        // background: $background-gradient-light-R;
+        .titulo-noticias{
+      
+            width: 80vw;
+            @include flexible(flex, column, center, flex-start);
+            height: 80px;
+            
+            h5{
+                @include nombre($background-dark, 600, 16px, $font-Montserrat, uppercase)
+            }
+            h3{
+                @include nombre($background-dark, 800, 30px, $font-Machina, uppercase)
+            }
+        }
+    
+        .noticias-cards{
+            @include flexible(flex, row, space-around, center);
+            width: 86vw;
+            max-width: 1340px;
+            height: 450px;
+            // @include flexible(flex, row, center, center);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+           
+            
+            .individualCard{
+            
+                border-radius: 15px;
+                max-height: 400px;
+                height: 400px;
+                max-width: 345px;
+                // background-color: $secondary-dark;
+                // clip-path: polygon(0 30%, 40% 0, 100% 0%, 100% 70%, 60% 100%, 0 100%);
+                position: relative;
+                
+                .cardBody{
+                    @include flexible(flex, row, center, center);
+                    border-radius: 15px;
+                    // max-height: 400px;
+                    height: 100%;
+                    // max-width: 345px;
+                    background-color: $secondary-color;
+                    clip-path: polygon(0 25%, 35% 0, 100% 0%, 100% 80%, 70% 100%, 0 100%);
+                    
+                    .conteinerCardElements{
+                        @include flexible(flex, column, center, center);
+                        
+                        .flechaEnlace{
+                            @include flexible(flex, row, center, center);
+                            position: absolute;
+                            top: 32px;
+                            right: 28px;
+                            width: 41px;
+                            height: 41px;
+                            border-radius: 10px;
+                            border: 1px solid #60F0EB;
+                            background-color: $background-dark;
+                            z-index: 1;
+                            color: #FFFFFF;
+                            cursor: pointer;
+                            transition: 0.3s;
+                                &:hover{
+                                    transform: scale(1.05);
+                                    
+                    
+                                }
+                        }
+                        img {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            position: relative;        
+                        }
+    
+                        h4{
+                            min-height: 50px;
+                            @include flexible(flex, row, flex-start, center);
+                            @include nombre(#ffff, 600, 16px, $font-Montserrat, uppercase);
+                            width: 80%;
+                            margin-top: 10px;
+                            // margin-bottom: 10px;
+                            text-align: start;
+                        }
+                        h5 {
+                            width: 80%;
+                            text-align: start;
+                            @include nombre(#ffff, 400, 14px, $font-Montserrat,uppercase)
+                        }
+                        
+                        .prices{
+                            @include flexible(flex, column, space-around, space-around);
+                            width: 80%;
+                            height: 50px;
+                            text-align: start;
+                            margin-top: 10px;
+                            margin-bottom: 20px;
+                            p {
+                                text-align: start;
+                                @include nombre(#ffff, 400, 14px, $font-Montserrat, uppercase);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .btn-conteiner{
+            width: 70vw;
+            .btn-noticias{
+                width: 189px;
+                height: 40px;
+                border: none;
+                font-family: $font-Montserrat;
+                background-color: #D6302A;
+                clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
+                font-size: 1rem;
+                color: #FFFFFF;
+                font-weight: 600;
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
         }
     }
 }

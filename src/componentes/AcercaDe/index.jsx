@@ -16,8 +16,10 @@ const AcercaDe = () => {
       </article>
       <article className="divDer">
         <div className="titulo-nosotros">
-          <h5>Descubre nuestros</h5>
-          <h3>NUEVOS LANZAMIENTOS</h3>
+          <h5>Conocenos</h5>
+          <h3>
+            ACERCA DE <label>NOSOTROS</label>
+          </h3>
         </div>
         <p>
           StadioPlus es una empresa web3 que tiende un puente entre el mundo del

@@ -2,11 +2,16 @@ import React from "react";
 
 import { FaSearch } from "react-icons/fa";
 import LogoNavDark from "../../assets/logoNav.png";
+import LogoLight from "../../assets/Group.png";
 
 const Nav = ({ setTheme, theme }) => {
   return (
     <nav className="nav">
-      <img src={LogoNavDark} className="logo-dark-nav" alt="" />
+      <img
+        src={theme == "dark" ? LogoNavDark : LogoLight}
+        className="logo-dark-nav"
+        alt=""
+      />
       <div className="searchBarLine">
         <form className="searchBar">
           <input

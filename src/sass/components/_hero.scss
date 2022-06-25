@@ -1,93 +1,217 @@
-.heroContainer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 85vh;
-    background: $background-gradient-left;
+.dark{
 
-    .articleIzq{
-        height: 100%;
-        width: 60%;
+    .heroContainer{
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
         align-items: center;
-        .text{
-           
-            width: 65%;
-            
-            h1 {
-                font-size: 45px;
-                font-family: $font-Machina;
-                font-weight: 800;
-                color: $font-button-color;
-                line-height: 120%;
-                margin-bottom: 14px;
-                label {
+        height: 85vh;
+        background: $background-gradient-left;
+    
+        .articleIzq{
+            height: 100%;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .text{
+                width: 80%;
+                
+                h1 {
                     font-size: 45px;
+                    font-family: $font-Machina;
                     font-weight: 800;
-                    color: $button-orange;
+                    color: $font-button-color;
+                    line-height: 120%;
+                    margin-bottom: 14px;
+                    label {
+                        font-size: 45px;
+                        font-weight: 800;
+                        color: $button-orange;
+                    }
+                }
+                p {
+                    font-family: $font-Montserrat;
+                    font-weight: 700;
+                    font-size: 1rem;
+                    color: $font-button-color;
+                    line-height: 19.2px;
+                    letter-spacing: 0.05em;
                 }
             }
-            p {
-                font-family: $font-Montserrat;
-                font-weight: 700;
-                font-size: 1rem;
-                color: $font-button-color;
-                line-height: 19.2px;
-                letter-spacing: 0.05em;
+            .btnContainer{
+                width: 65%;
+                margin-top: 30px;
+    
+                .btn-naranja {
+                    width: 189px;
+                    height: 33px;
+                    border: none;
+                    font-family: $font-Montserrat;
+                    background-color: #D6302A;
+                    clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
+                    font-size: 1rem;
+                    color: #FFFFFF;
+                    font-weight: 600;
+                    transition: 0.3s;
+                &:hover{
+                    transform: scale(1.05);
+                    cursor: pointer;
+      
+                }
+                }
+    
+                .btn-azul {
+                    width: 189px;
+                    height: 33px;
+                    border: none;
+                    font-family: $font-Montserrat;
+                    background-color: $secondary-color;
+                    clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
+                    font-size: 1rem;
+                    color: #FFFFFF;
+                    font-weight: 600;
+                    margin-right: 30px;
+                    transition: 0.3s;
+                &:hover{
+                    transform: scale(1.05);
+                    cursor: pointer;
+      
+                }
+                }
             }
         }
-        .btnContainer{
-            width: 65%;
-            margin-top: 30px;
-
-            .btn-naranja {
-                width: 189px;
-                height: 33px;
-                border: none;
-                font-family: $font-Montserrat;
-                background-color: #D6302A;
-                clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
-                font-size: 1rem;
-                color: #FFFFFF;
-                font-weight: 600;
-            }
-
-            .btn-azul {
-                width: 189px;
-                height: 33px;
-                border: none;
-                font-family: $font-Montserrat;
-                background-color: $secondary-color;
-                clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
-                font-size: 1rem;
-                color: #FFFFFF;
-                font-weight: 600;
-                margin-right: 30px;
+        .articleDer{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 50%;
+            animation: button 1s cubic-bezier(0.11, 0, 0.5, 0) 2s 1 normal both;
+            .cardPlayer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                .player{
+                    position: absolute;
+                    z-index: 1;
+                    clip-path: polygon(1% 95%, 66% 94%, 100% 60%, 100% 1%, 0% 0%);
+                }
+                .fondoPlayer{
+                    height: fit-content;
+                    position: relative;
+                }
             }
         }
     }
-    .articleDer{
-        
+}
+
+.light{
+    .heroContainer{
         display: flex;
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
-        height: 100%;
-        width: 50%;
-        .cardPlayer{
+        height: 85vh;
+        background: $background-gradient-light-L;
+    
+        .articleIzq{
+            height: 100%;
+            width: 60%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-
-            .player{
-                position: absolute;
-                z-index: 1;
-                clip-path: polygon(1% 95%, 66% 94%, 100% 60%, 100% 1%, 0% 0%);
+            .text{
+                width: 80%;
+                
+                h1 {
+                    font-size: 45px;
+                    font-family: $font-Machina;
+                    font-weight: 800;
+                    color: $background-dark;
+                    line-height: 120%;
+                    margin-bottom: 14px;
+                    label {
+                        font-size: 45px;
+                        font-weight: 800;
+                        color: $button-orange;
+                    }
+                }
+                p {
+                    font-family: $font-Montserrat;
+                    font-weight: 700;
+                    font-size: 1rem;
+                    color: $background-dark;
+                    line-height: 19.2px;
+                    letter-spacing: 0.05em;
+                }
             }
-            .fondoPlayer{
-                height: fit-content;
-                position: relative;
+            .btnContainer{
+                width: 65%;
+                margin-top: 30px;
+    
+                .btn-naranja {
+                    width: 189px;
+                    height: 33px;
+                    border: none;
+                    font-family: $font-Montserrat;
+                    background-color: #D6302A;
+                    clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
+                    font-size: 1rem;
+                    color: #FFFFFF;
+                    font-weight: 600;
+                    transition: 0.3s;
+                &:hover{
+                    transform: scale(1.05);
+                    cursor: pointer;
+      
+                }
+                }
+    
+                .btn-azul {
+                    width: 189px;
+                    height: 33px;
+                    border: none;
+                    font-family: $font-Montserrat;
+                    background-color: $secondary-color;
+                    clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
+                    font-size: 1rem;
+                    color: #FFFFFF;
+                    font-weight: 600;
+                    margin-right: 30px;
+                    transition: 0.3s;
+                &:hover{
+                    transform: scale(1.05);
+                    cursor: pointer;
+      
+                }
+                }
+            }
+        }
+        .articleDer{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 50%;
+            animation: button 1s cubic-bezier(0.11, 0, 0.5, 0) 2s 1 normal both;
+            .cardPlayer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                .player{
+                    position: absolute;
+                    z-index: 1;
+                    clip-path: polygon(1% 95%, 66% 94%, 100% 60%, 100% 1%, 0% 0%);
+                }
+                .fondoPlayer{
+                    height: fit-content;
+                    position: relative;
+                }
             }
         }
     }

@@ -20,8 +20,12 @@ const Home = () => {
       <Card tituloCards={"Obras Destacadas"} />
       <Card tituloCards={"Colecciones"} />
       <div className="botonesHome">
-        <button className="btn-token">TOKEN</button>
-        <button className="btn-token">IR AL BLOG</button>
+        <div className="btn-line">
+          <button className="btn-token">TOKEN</button>
+        </div>
+        <div className="btn-line">
+          <button className="btn-token">IR AL BLOG</button>
+        </div>
       </div>
       <Banner1 />
       <Clients />

@@ -3,39 +3,105 @@
     height: 100%;
 }
 
-.titulo-cards{
-    
-    @include flexible(flex, column, center, flex-start);
-    height: 80px;
-    padding: 30px 100px 0px 100px;
-    h5{
-        @include nombre(#ffff, 600, 16px, $font-Montserrat, uppercase)
+.dark{
+    .titulo-cards{
+        
+        @include flexible(flex, column, center, flex-start);
+        height: 80px;
+        padding: 30px 100px 0px 100px;
+        h5{
+            @include nombre(#ffff, 600, 16px, $font-Montserrat, uppercase)
+        }
+        h3{
+            @include nombre(#ffff, 800, 30px, $font-Machina, uppercase)
+        }
+        box-shadow:  6px 6px 23px #01285D,
+        -6px -6px 23px #0039FF;
     }
-    h3{
-        @include nombre(#ffff, 800, 30px, $font-Machina, uppercase)
+
+    .botonesHome{
+        @include flexible(flex, row, center, center);
+        height: 50px;
+        padding: 20px 50px 20px 50px;
+        margin: 20px 0px 20px 0px;
+
+        .btn-line{
+            width: 192px;
+            height: 42px;
+            background-color: $secondary-color;
+            clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
+            margin-right: 50px;
+            transition: 0.3s;
+            
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+            .btn-token{
+                width: 189px;
+                height: 40px;
+                border: none;
+                font-family: $font-Montserrat;
+                border: 1.5px solid $secondary-color;
+                background-color: $secondary-dark;
+                clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
+                font-size: 1rem;
+                color: #FFFFFF;
+                font-weight: 600;
+                margin-right: 50px;
+                cursor: pointer;
+            }
+
+        }
     }
-    box-shadow:  6px 6px 23px #01285D,
-    -6px -6px 23px #0039FF;
 }
 
-.botonesHome{
-    @include flexible(flex, row, center, center);
-    height: 50px;
-    padding: 20px 50px 20px 50px;
-    margin: 20px 0px 20px 0px;
+.light{
+    .titulo-cards{  
+        @include flexible(flex, column, center, flex-start);
+        height: 80px;
+        padding: 30px 100px 0px 100px;
+        h5{
+            @include nombre($background-dark, 600, 16px, $font-Montserrat, uppercase)
+        }
+        h3{
+            @include nombre($background-dark, 800, 30px, $font-Machina, uppercase)
+        }
+        box-shadow:  6px 6px 23px #01285D,
+        // -6px -6px 23px #0039FF
+    }
 
-    .btn-token{
-        width: 189px;
-        height: 40px;
-        border: none;
-        font-family: $font-Montserrat;
-        border: 1.5px solid $secondary-color;
-        background-color: $secondary-dark;
-        clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
-        font-size: 1rem;
-        color: #FFFFFF;
-        font-weight: 600;
-        margin-right: 50px;
-        cursor: pointer;
+    .botonesHome{
+        @include flexible(flex, row, center, center);
+        height: 50px;
+        padding: 20px 50px 20px 50px;
+        margin: 20px 0px 20px 0px;
+        .btn-line{
+            width: 192px;
+            height: 42px;
+            background-color: $secondary-color;
+            clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
+            margin-right: 50px;
+            transition: 0.3s;
+            
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+            .btn-token{
+                width: 189px;
+                height: 40px;
+                border: none;
+                font-family: $font-Montserrat;
+                border: 1.5px solid $secondary-color;
+                background-color: #FFFFFF;
+                clip-path: polygon(0 35%, 10% 0, 100% 0%, 100% 75%, 90% 100%, 0 100%);
+                font-size: 1rem;
+                color: $secondary-color;
+                font-weight: 600;
+                margin-right: 50px;
+                cursor: pointer;
+               
+            }
+        }
     }
 }
+
